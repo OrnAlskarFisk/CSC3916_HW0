@@ -1,0 +1,35 @@
+Alt-Svc: Specifies "Alternative Services" for HTTP, which allow an origin's resources to be authoritatively available at a separate
+network location, possibly accessed with a different protocol configuration.
+
+Cache Control: General-header field is used to specify directives for caching mechanisms in both requests and responses. Caching
+directives are unidirectional, meaning that a given directive in a request is not implying that the same directive is to be given in the response.
+
+Content Encoding: Used to compress the media-type. When present, its value indicates which encodings were applied to the entity-body. 
+It lets the client know, how to decode in order to obtain the media-type referenced by the Content-Type header. 
+
+Content Type: Tells the client what the content type of the returned content actually is.
+
+Date: Contains the date and time at which the message was originated.
+
+ETag: An identifier for a specific version of a resource. It allows caches to be more efficient, and saves bandwidth, as a web server
+does not need to send a full response if the content has not changed.
+
+Expires: Contains the date/time after which the response is considered stale. Invalid dates, like the value 0, represent a date in the past 
+and mean that the resource is already expired. 
+
+Server: Contains information about the software used by the origin server to handle the request. 
+
+Transfer Encoding: Specifies the form of encoding used to safely transfer the entity to the user. a hop-by-hop header, that is applying to
+a message between two nodes, not to a resource itself. Each segment of a multi-node connection can use different Transfer-Encoding values.
+
+Vary: Tells any HTTP cache which parts of the request header, other than the path and the Host header, to take into account when trying to
+find the right object. 
+
+X-Content-Type-Options: Response HTTP header is a marker used by the server to indicate that the MIME types advertised in the Content-Type
+headers should not be changed and be followed.
+
+X Frame Options: Response header can be used to indicate whether or not a browser should be allowed to render a page in a <frame>, <iframe> or <object>.
+Sites can use this to avoid clickjacking attacks, by ensuring that their content is not embedded into other sites.
+
+X-XSS Protection: Response header is a feature of Internet Explorer, Chrome and Safari that stops pages from loading when they detect reflected cross-site
+scripting (XSS) attacks.

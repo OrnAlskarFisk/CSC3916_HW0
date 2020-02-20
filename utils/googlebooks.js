@@ -7,6 +7,13 @@ module.exports = async (phrase) => {
             q: `${phrase}`
         }
     })
+	var jsonReturn = {
+	data: results.data;
+	status: results.status;
+	statusText: results.statusText;
+	headers: results.headers ? results.headers: '';
+	requestHeader: results.config? results.config.headers : ''
+	}
 
     return JSON.stringify(results.data);
 }
